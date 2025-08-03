@@ -1,0 +1,304 @@
+/* Services Page Specific Styles */
+
+/* Services Hero */
+.services-hero {
+    padding: 120px 0 80px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 0, 128, 0.05), rgba(121, 40, 202, 0.05), rgba(0, 217, 255, 0.05));
+}
+
+.services-title {
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.3s forwards;
+}
+
+.services-title .line {
+    display: block;
+    overflow: hidden;
+}
+
+.services-description {
+    font-size: 1.3rem;
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.6s forwards;
+}
+
+/* Services Grid */
+.services-grid-section {
+    padding: 80px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+}
+
+.service-card {
+    padding: 3rem 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 25px 50px rgba(0, 217, 255, 0.2);
+    border-color: rgba(0, 217, 255, 0.3);
+}
+
+.service-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 2.5rem;
+    padding: 25px;
+    background: linear-gradient(45deg, #ff0080, #7928ca, #00d9ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.service-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke-width: 2;
+    color: #fff;
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.service-card p {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.service-features li {
+    padding: 0.5rem 0;
+    color: #aaa;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00d9ff;
+    font-weight: bold;
+}
+
+.service-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.service-tech span {
+    padding: 0.5rem 1rem;
+    background: rgba(0, 217, 255, 0.1);
+    border: 1px solid rgba(0, 217, 255, 0.3);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #00d9ff;
+    transition: all 0.3s ease;
+}
+
+.service-tech span:hover {
+    background: rgba(0, 217, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Process Section */
+.process-section {
+    padding: 100px 0;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.process-step {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.process-step:hover {
+    transform: translateX(20px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.1);
+}
+
+.step-number {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #ff0080, #7928ca, #00d9ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.step-content p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.services-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(255, 0, 128, 0.1), rgba(121, 40, 202, 0.1), rgba(0, 217, 255, 0.1));
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ff0080, #7928ca, #00d9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design for Services */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .process-steps {
+        gap: 2rem;
+    }
+    
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .process-step:hover {
+        transform: translateY(-10px);
+    }
+    
+    .services-title {
+        font-size: 2.5rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .service-icon {
+        width: 70px;
+        height: 70px;
+        padding: 20px;
+    }
+    
+    .service-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .service-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .step-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+}
